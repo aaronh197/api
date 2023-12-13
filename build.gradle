@@ -1,0 +1,4 @@
+plugins {
+	id 'hmc.docker-tasks'
+	id 'hmc.sonarqube-conventions'
+}

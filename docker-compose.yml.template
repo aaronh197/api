@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  app:
+    env_file:
+      - ".env"
+    image: @DOCKER_IMAGE_NAME@:@DOCKER_TAG@
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./keys:/home/keys
+      - ./financial-reports:/home/financial-reports
+  smtp:
+    image: mailhog/mailhog
+    restart: always
+    hostname: paypal-hyperwallet-mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"

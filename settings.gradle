@@ -1,0 +1,3 @@
+rootProject.name = 'hyperwallet-mirakl-connector'
+
+include 'hmc-infrastructure', 'hmc-jobsystem', 'hmc-sellers', 'hmc-invoices', 'hmc-app', 'hmc-notifications', 'hmc-kyc', 'hmc-reports', 'hmc-observability', 'hmc-testsupport'
